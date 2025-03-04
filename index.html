@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pokédex</title>
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="pokedex">
+      <div class="top-section">
+        <div class="lights-container">
+          <div class="big-light"></div>
+          <div class="small-lights">
+            <div class="light red"></div>
+            <div class="light yellow"></div>
+            <div class="light green"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen">
+        <div class="info">
+          <!-- Affichage de l'ID du Pokémon -->
+          <p id="id"></p>
+          <!-- Nom du Pokémon -->
+          <p id="name"></p>
+        </div>
+        <!-- Image du Pokémon -->
+        <img id="sprite" src="" alt="Pokémon" />
+      </div>
+
+      <div class="buttons">
+        <div class="circle-button"></div>
+        <div class="rect-button red"></div>
+        <div class="rect-button gray"></div>
+
+        <div class="directional-pad">
+          <!-- Lorsqu'on clique -> exécution de la fonction prevPokemon() et nextPokemon() définie dans script.js -->
+          <button class="arrow up" onclick="prevPokemon()">▲</button>
+          <button class="arrow down" onclick="nextPokemon()">▼</button>
+          <button class="arrow left">◀</button>
+          <button class="arrow right">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <br />
+      Réalisé par
+      <a href="https://github.com/PaulineRiedinger" target="_blank"
+        >Pauline Riedinger</a
+      >
+    </footer>
+
+    <!-- Importation du fichier JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  text-align: center;
+  font-family: "PRESS START 2P", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, #f8f3e8, #ffe5b4, #ffcf9d);
+}
+
+/* Pokedex : Conteneur principal */
+.pokedex {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background: #ff4f4f;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  border: 6px solid #d94545;
+}
+
+/* Section supérieure avec lumières */
+.top-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Lumières en haut du Pokedex */
+.lights-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grosse lumière bleue */
+.big-light {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #609edb;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(160, 196, 255, 0.7);
+}
+
+/* Petites lumières colorées */
+.small-lights {
+  display: flex;
+  gap: 5px;
+}
+
+.light {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* Couleurs des lumières */
+.red {
+  background: #9e242a;
+}
+.yellow {
+  background: #f2fa51;
+}
+.green {
+  background: #5fc178;
+}
+
+/* Écran du Pokédex */
+.screen {
+  width: 300px;
+  height: 180px;
+  background: linear-gradient(to bottom, #aee2ff, #b6e2a1, #fff7ae);
+  border: 5px solid #8a8a8a;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  color: #505052;
+}
+
+/* ID et nom du Pokémon */
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sprite du Pokémon */
+#sprite {
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Boutons du Pokédex */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Bouton circulaire */
+.circle-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #505052;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: 3px solid #3a3a3a;
+}
+
+/* Boutons rectangulaires */
+.rect-button {
+  width: 40px;
+  height: 10px;
+  border-radius: 5px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+}
+
+/* Couleurs des boutons */
+.red {
+  background: #b7313c;
+}
+.gray {
+  background: #609fd7;
+}
+
+/* Croix de navigation */
+.directional-pad {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #505052;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  border: 4px solid #3d3d3d;
+}
+
+/* Flèches du pad */
+.arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #505052;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #3d3d3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border: 4px solid #3d3d3d;
+}
+
+/* Effet bouton enfoncé pour les flèches du pad */
+.arrow:active {
+  transform: scale(0.9);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border-color: #2a2a2a;
+}
+
+/* Position des flèches */
+.up {
+  top: -35px;
+}
+.down {
+  bottom: -35px;
+}
+.left {
+  left: -35px;
+}
+.right {
+  right: -35px;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+}
+
+footer a {
+  color: #609fd7;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 📱💻 Adaptations pour les petits écrans */
+@media (max-width: 600px) {
+  .pokedex {
+    width: 100%;
+    max-width: 380px;
+    padding: 10px;
+  }
+
+  .big-light {
+    width: 35px;
+    height: 35px;
+  }
+  .screen {
+    max-width: 230px;
+    height: 150px;
+    padding: 8px;
+    border: 4px solid #8a8a8a;
+  }
+
+  #sprite {
+    width: 120px;
+  }
+
+  .circle-button {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #3a3a3a;
+  }
+
+  .rect-button {
+    width: 30px;
+    height: 8px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
+
+  .directional-pad {
+    width: 25px;
+    height: 25px;
+  }
+
+  .arrow {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    border: 3px solid #3d3d3d;
+  }
+
+  .buttons {
+    gap: 8px;
+    margin-top: 40px;
+  }
+}
