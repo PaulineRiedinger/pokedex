@@ -81,4 +81,6 @@ async function prevPokemon() {
  */
 
 // Charge et affiche le premier Pokémon au démarrage de la page
-loadPokemon(currentPokemon);
+(async () => {
+  await loadPokemon(currentPokemon);
+})();
