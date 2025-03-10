@@ -1,3 +1,4 @@
+/* Général */
 body {
   text-align: center;
   font-family: "PRESS START 2P", sans-serif;
@@ -7,6 +8,7 @@ body {
   height: 100vh;
   margin: 0;
   background: linear-gradient(to bottom, #f8f3e8, #ffe5b4, #ffcf9d);
+  flex-direction: column; /* On met en colonne tous les éléments */
 }
 
 /* Pokedex : Conteneur principal */
@@ -191,15 +193,14 @@ body {
 
 /* Footer */
 footer {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static;
+  margin-top: 20px; /* On espace le footer sous le Pokedex */
   font-size: 12px;
   color: #333;
   text-align: center;
 }
 
+/* Liens dans le footer */
 footer a {
   color: #609fd7;
   text-decoration: none;
@@ -211,23 +212,32 @@ footer a:hover {
 
 /* Section des Mentions Légales */
 .legal-mentions {
-  margin-top: 20px;
-  padding: 10px;
   font-family: "Courier New", Courier, monospace;
   font-size: 10px;
   color: #555;
   line-height: 1.6;
+  margin: 10px;
+  text-align: justify;
+  max-width: 90%;
+}
+
+.legal-mentions h2 {
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
 .legal-mentions strong {
   color: #333;
+  font-weight: bold;
 }
 
 /* 📱💻 Adaptations pour les petits écrans */
 @media (max-width: 600px) {
   .pokedex {
     width: 100%;
-    max-width: 380px;
+    max-width: 350px;
     padding: 10px;
   }
 
@@ -235,6 +245,7 @@ footer a:hover {
     width: 35px;
     height: 35px;
   }
+
   .screen {
     max-width: 230px;
     height: 150px;
@@ -273,5 +284,14 @@ footer a:hover {
   .buttons {
     gap: 8px;
     margin-top: 40px;
+  }
+
+  .legal-mentions {
+    font-size: 8px;
+    margin-top: 10px;
+  }
+
+  footer {
+    font-size: 10px;
   }
 }
